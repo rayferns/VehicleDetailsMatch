@@ -16,5 +16,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Container/Automation/selenium/poi-bin-3.17-20170915/poi-3.17/poi-ooxml-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/Container/Automation/selenium/selenium-java-3.11.0/client-combined-3.11.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
