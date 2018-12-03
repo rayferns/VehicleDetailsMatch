@@ -32,4 +32,4 @@ The project is divided into 4 parts.
 
 Both Part 1 and 2 are developed in Eclipse IDE for Java Developers Version: Oxygen.3 Release (4.7.3)
 
-Screenshots of the test are included in the screenshot folder.
+Screenshots of the test are not included, since the project didnt run successfully.
