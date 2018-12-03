@@ -1,0 +1,172 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 7,
+        "name": "Get to the DVLA page where I can enter vehicle registration",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "I am on the gov dvla page",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 9,
+            "name": "I can see the heading \u0027Get vehicle information from DVLA\u0027 on \u0027get information\u0027 page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 10,
+            "name": "I click on the button labeled \u0027Start now\u0027 on \u0027get information\u0027 page",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 11,
+            "name": "I land on the \u0027Enter the registration number of the vehicle\u0027 page with title like \u0027check if vehicle is taxed and had an MOT\u0027",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 26,
+        "name": "Verify gov dvla held vehicle information using a valid vehicle registration",
+        "description": "",
+        "id": "use-the-https://www.gov.uk/get-vehicle-information-from-dvla-site-to-verify-matching-information-about-a-vehicle-using-the-vehicle-registration;verify-gov-dvla-held-vehicle-information-using-a-valid-vehicle-registration;valid-car-registration-details;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 14,
+            "name": "I enter a valid vehicle registration \u0027\u003cregistrationnumber\u003e\u0027 on \u0027vehicle enquiry\u0027 page",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 15,
+            "name": "I click on the button labeled \u0027Continue\u0027 on \u0027vehicle enquiry\u0027 page",
+            "match": {},
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 16,
+            "name": "I land on the \u0027confirm vehicle\u0027 page with title like \u0027Check if a vehicle is taxed and has an MOT\u0027",
+            "match": {},
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 17,
+            "name": "I verify \u0027Registration number:KX67 LFA, Make:AUDI, Color:BLACK\u0027 of the vehicle on the \u0027confirm vehicle\u0027 page",
+            "match": {},
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 18,
+            "name": "I click radio button \u0027\u003cradio_button\u003e\u0027 on the confirm vehicle page",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 19,
+            "name": "I click on the button labeled \u0027\u003cstring\u003e\u0027 on \u0027confirm vehicle\u0027 page",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 20,
+            "name": "I land on the \u0027view vehicle\u0027 page with title like \u0027\u003cpage_title_2\u003e\u0027",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 21,
+            "name": "I verify the vehicle has Tax and MOT on the view vehicle page",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 22,
+            "name": "I verify \u0027Date of first registration: September 2017, Year of manufacture: 2017, Fuel type: PETROL\u0027 of the vehicle on the \u0027view vehicle\u0027 page",
+            "match": {},
+            "matchedColumns": [
+              4
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@SmokeTest"
+          }
+        ]
+      }
+    ],
+    "name": "Use the https://www.gov.uk/get-vehicle-information-from-dvla site to verify matching information about a vehicle using the vehicle registration",
+    "description": "As a user of the gov dvla site\r\nI want to be able to enter a vehicle registraion number\r\nand verify the details match that vehicle",
+    "id": "use-the-https://www.gov.uk/get-vehicle-information-from-dvla-site-to-verify-matching-information-about-a-vehicle-using-the-vehicle-registration",
+    "keyword": "Feature",
+    "uri": "VehicleDetailsValidation.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@SmokeTest"
+      }
+    ]
+  }
+]

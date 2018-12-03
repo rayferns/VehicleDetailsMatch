@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="0">
+<testcase classname="Use the https://www.gov.uk/get-vehicle-information-from-dvla site to verify matching information about a vehicle using the vehicle registration" name="Verify gov dvla held vehicle information using a valid vehicle registration" time="0">
+<failure message="The scenario has pending or undefined step(s)"><![CDATA[Given I am on the gov dvla page.............................................undefined
+Then I can see the heading 'Get vehicle information from DVLA' on 'get information' page.undefined
+When I click on the button labeled 'Start now' on 'get information' page....undefined
+Then I land on the 'Enter the registration number of the vehicle' page with title like 'check if vehicle is taxed and had an MOT'.undefined
+When I enter a valid vehicle registration '<registrationnumber>' on 'vehicle enquiry' page.undefined
+And I click on the button labeled 'Continue' on 'vehicle enquiry' page......undefined
+Then I land on the 'confirm vehicle' page with title like 'Check if a vehicle is taxed and has an MOT'.undefined
+And I verify 'Registration number:KX67 LFA, Make:AUDI, Color:BLACK' of the vehicle on the 'confirm vehicle' page.undefined
+When I click radio button '<radio_button>' on the confirm vehicle page......undefined
+And I click on the button labeled '<string>' on 'confirm vehicle' page......undefined
+Then I land on the 'view vehicle' page with title like '<page_title_2>'.....undefined
+And I verify the vehicle has Tax and MOT on the view vehicle page...........undefined
+And I verify 'Date of first registration: September 2017, Year of manufacture: 2017, Fuel type: PETROL' of the vehicle on the 'view vehicle' page.undefined
+]]></failure>
+</testcase>
+</testsuite>
