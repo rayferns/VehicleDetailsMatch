@@ -76,12 +76,30 @@ public class VehicleDetailsValidationTest extends TestBase{
 	}
 
 	@Then("^I land on the 'Enter the registration number of the vehicle' page with title like 'check if vehicle is taxed and had an MOT'$")
-	public void i_land_on_the_Enter_the_registration_number_of_the_vehicle_page_with_title_like_check_if_vehicle_is_taxed_and_had_an_MOT() throws Throwable {
-		
-	}
+	public void i_land_on_the_Enter_the_registration_number_of_the_vehicle_page_with_title_like_check_if_vehicle_is_taxed_and_had_an_MOT(String title) throws Throwable {
+		String confirmVehiclesPageTitle =  confirmVehiclesPage.verifyTitlePage(title);
+		Assert.assertEquals("Check if a vehicle is taxed and has an MOT", confirmVehiclesPageTitle);
 
 	@When("^I enter a valid vehicle registration '<registrationnumber>' on 'vehicle enquiry' page$")
-	public void i_enter_a_valid_vehicle_registration_registrationnumber_on_vehicle_enquiry_page(DataTable table) throws Throwable {
+	public void i_enter_a_valid_vehicle_registration_registrationnumber_on_vehicle_enquiry_page(@Transform(ExcelDataToDataTable.class) DataTable table) throws Throwable {
+		System.out.println(table.toString());
+		
+		List<String> dataList = table.asList(String.class);
+		
+		for(String str : dataList){
+			System.out.println(str);
+		}
+	}
+
+	@When("^I click on the button labeled 'Continue' on 'vehicle enquiry' page$")
+	public void i_click_on_the_button_labeled_Continue_on_vehicle_enquiry_page(DataTable Table) throws Throwable {
+		
+		carRegistrationNumberPage.verifyCarRegNo(Table.toString());
+	}
+	
+
+	@Then("^I land on the 'confirm vehicle' page with title like 'Check if a vehicle is taxed and has an MOT'$")
+	public void i_land_on_the_confirm_vehicle_page_with_title_like_Check_if_a_vehicle_is_taxed_and_has_an_MOT(@Transform(ExcelDataToDataTable.class) DataTable table) throws Throwable {
 		System.out.println(table.toString());
 		
 		List<String> dataList = table.asList(String.class);
@@ -92,16 +110,10 @@ public class VehicleDetailsValidationTest extends TestBase{
 		
 	}
 
-	@When("^I click on the button labeled 'Continue' on 'vehicle enquiry' page$")
-	public void i_click_on_the_button_labeled_Continue_on_vehicle_enquiry_page() throws Throwable {
-	}
-
-	@Then("^I land on the 'confirm vehicle' page with title like 'Check if a vehicle is taxed and has an MOT'$")
-	public void i_land_on_the_confirm_vehicle_page_with_title_like_Check_if_a_vehicle_is_taxed_and_has_an_MOT() throws Throwable {
-	}
-
 	@Then("^I verify 'Registration number:KX(\\d+) LFA, Make:AUDI, Color:BLACK' of the vehicle on the 'confirm vehicle' page$")
 	public void i_verify_Registration_number_KX_LFA_Make_AUDI_Color_BLACK_of_the_vehicle_on_the_confirm_vehicle_page(int arg1) throws Throwable {
+		
+	}
 	}
 
 	@When("^I click radio button '<radio_button>' on the confirm vehicle page$")
@@ -130,8 +142,7 @@ public class VehicleDetailsValidationTest extends TestBase{
 			System.out.println(str);
 		
 		}
-		//Assert.assertEquals(expected, vehicleDetailsPage.verifycarRegistrationNumber());
-		Assert.assertEquals();
+
 	}
 
 }
