@@ -40,8 +40,11 @@ public class ConfirmVehiclesPage extends TestBase
 	WebElement continueButton;
 	
 		
-	public boolean verifyTitlePage(){
+	public boolean verifyTitlePageExist(){
 		return titlePage.isDisplayed();
+	}
+	public String verifyTitlePage(String title){
+		return titlePage.getText();
 	}
 	public boolean verifycarRegNumber(){
 		return carRegNumber.isDisplayed();
